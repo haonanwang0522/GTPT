@@ -1,0 +1,88 @@
+AUTO_RESUME: true
+CUDNN:
+  BENCHMARK: true
+  DETERMINISTIC: false
+  ENABLED: true
+DATA_DIR: ''
+GPUS: (0,1,2,3)
+OUTPUT_DIR: 'output'
+LOG_DIR: 'log'
+WORKERS: 24
+PRINT_FREQ: 100
+
+DATASET:
+  COLOR_RGB: true
+  DATASET: 'coco'
+  DATA_FORMAT: jpg
+  FLIP: true
+  NUM_JOINTS_HALF_BODY: 8
+  PROB_HALF_BODY: 0.3
+  ROOT: '../data/coco/'
+  ROT_FACTOR: 45
+  SCALE_FACTOR: 0.35
+  TEST_SET: 'val2017'
+  TRAIN_SET: 'train2017'
+MODEL:
+  INIT_WEIGHTS: true
+  NAME: pose_gtpt_s_human
+  SIMDR_SPLIT_RATIO: 2.0
+  HEAD_INPUT: 192  
+  NUM_JOINTS: 17
+  PRETRAINED: ''
+  COORD_REPRESENTATION: 'sa-simdr'
+  TRANSFORMER_DEPTH: 12
+  TRANSFORMER_HEADS: 8
+  TRANSFORMER_MLP_RATIO: 3
+  POS_EMBEDDING_TYPE: 'sine-full'
+  INIT: true
+  DIM: 192 # 4*4*3
+  PATCH_SIZE:
+  - 3
+  - 4
+  IMAGE_SIZE:
+  - 192
+  - 256
+  HEATMAP_SIZE:
+  - 192
+  - 256
+  SIGMA: 4
+  EXTRA:
+    KEEP_RATE: [1.0, 0.7, 0.3, 0.1]
+LOSS:
+  USE_TARGET_WEIGHT: true
+  TYPE: 'KLDiscretGlobalPerceivedLoss'
+TRAIN:
+  BATCH_SIZE_PER_GPU: 64
+  SHUFFLE: true
+  BEGIN_EPOCH: 0
+  END_EPOCH: 300
+  OPTIMIZER: adam
+  LR: 0.001
+  LR_FACTOR: 0.1
+  LR_STEP:
+  - 200
+  - 260
+  WD: 0.0001
+  GAMMA1: 0.99
+  GAMMA2: 0.0
+  MOMENTUM: 0.9
+  NESTEROV: false
+TEST:
+  BATCH_SIZE_PER_GPU: 64
+  COCO_BBOX_FILE: '../data/coco/person_detection_results/COCO_val2017_detections_AP_H_56_person.json'
+  BBOX_THRE: 1.0
+  IMAGE_THRE: 0.0
+  IN_VIS_THRE: 0.01
+  MODEL_FILE: ''
+  NMS_THRE: 1.0
+  OKS_THRE: 0.9
+  USE_GT_BBOX: false
+  FLIP_TEST: true
+  POST_PROCESS: false
+  SHIFT_HEATMAP: true
+DEBUG:
+  DEBUG: false
+  SAVE_BATCH_IMAGES_GT: false
+  SAVE_BATCH_IMAGES_PRED: false
+  SAVE_HEATMAPS_GT: false
+  SAVE_HEATMAPS_PRED: false
