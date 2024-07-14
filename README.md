@@ -1,11 +1,11 @@
-# GTPT: Group-based Token Pruning Transformer for Efficient Human Pose Estimation [arxiv]()
+# GTPT: Group-based Token Pruning Transformer for Efficient Human Pose Estimation [arxiv](https://arxiv.org/abs/)
 
 > [**GTPT: Group-based Token Pruning Transformer for Efficient Human Pose Estimation**](https://arxiv.org/abs/)<br>
 > Accepted by **ECCV 2024**<br>
 > [Haonan Wang](https://github.com/haonanwang0522), Jie Liu, Jie Tang, [Gangshan Wu](http://mcg.nju.edu.cn/member/gswu/en/index.html), Bo Xu, Yanbing Chou, Yong Wang
 
 ## News!
-<!-- - [2023.08.03] The pretrained models are released in [Google Drive](https://drive.google.com/drive/folders/1ErxLJjrvgXNuNaflN62fvS6nhJfmBEjH?usp=drive_link)! -->
+- [2024.07.14] The pretrained models are released in [Google Drive](https://drive.google.com/drive/folders/188-x9NyIhXnU8k5_b1dRQbRRDg4CxKtI?usp=sharing)!
 - [2024.07.13] The codes for SRPose are released!
 - [2024.07.01] Our paper ''GTPT: Group-based Token Pruning Transformer for Efficient Human Pose Estimation'' has been accpeted by **ECCV 2024**. If you find this repository useful please give it a star 🌟. 
 
@@ -499,7 +499,7 @@ This is the official implementation of [GTPT: Group-based Token Pruning Transfor
 Please refer to [THIS](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch) to prepare the environment step by step.
 
 ### 2. Model Zoo
-Pretrained models are provided in our [model zoo]().
+Pretrained models are provided in our [model zoo](https://drive.google.com/drive/folders/188-x9NyIhXnU8k5_b1dRQbRRDg4CxKtI?usp=sharing).
 
 ### 3. Trainging
 ```bash=
@@ -514,7 +514,8 @@ CUDA_VISIBLE_DEVICES=<GPUs> python tools/test.py --cfg <Config PATH>
 ```
 
 ## Acknowledgement
-We acknowledge the excellent implementation from [SimCC](https://github.com/leeyegy/SimCC), [HRNet](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch) and [HRFormer](https://github.com/HRNet/HRFormer).
+We acknowledge the excellent implementation from [SimCC](https://github.com/leeyegy/SimCC), [TokenPose
+](https://github.com/leeyegy/TokenPose), [HRNet](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch) and [HRFormer](https://github.com/HRNet/HRFormer).
 
 ## Citations
 If you use our code or models in your research, please cite with:
