@@ -1,6 +1,6 @@
-# GTPT: Group-based Token Pruning Transformer for Efficient Human Pose Estimation [arxiv](https://arxiv.org/abs/)
+# GTPT: Group-based Token Pruning Transformer for Efficient Human Pose Estimation [arxiv](https://arxiv.org/abs/2407.10756)
 
-> [**GTPT: Group-based Token Pruning Transformer for Efficient Human Pose Estimation**](https://arxiv.org/abs/)<br>
+> [**GTPT: Group-based Token Pruning Transformer for Efficient Human Pose Estimation**](https://arxiv.org/abs/2407.10756)<br>
 > Accepted by **ECCV 2024**<br>
 > [Haonan Wang](https://github.com/haonanwang0522), Jie Liu, Jie Tang, [Gangshan Wu](http://mcg.nju.edu.cn/member/gswu/en/index.html), Bo Xu, Yanbing Chou, Yong Wang
 
@@ -519,11 +519,9 @@ We acknowledge the excellent implementation from [SimCC](https://github.com/leey
 
 ## Citations
 If you use our code or models in your research, please cite with:
-<!-- ```
-@article{wang2023lightweight,
-  title={Lightweight Super-Resolution Head for Human Pose Estimation},
-  author={Wang, Haonan and Liu, Jie and Tang, Jie and Wu, Gangshan},
-  journal={arXiv preprint arXiv:2307.16765},
-  year={2023}
+@article{wang2024gtpt,
+  title={GTPT: Group-based Token Pruning Transformer for Efficient Human Pose Estimation},
+  author={Wang, Haonan and Liu, Jie and Tang, Jie and Wu, Gangshan and Xu, Bo and Chou, Yanbing and Yong, Wang},
+  journal={arXiv preprint arXiv:2407.10756},
+  year={2024}
 }
-``` -->
