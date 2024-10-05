@@ -175,7 +175,7 @@ def validate_sa_simdr(config, val_loader, val_dataset, model, criterion, output_
                 "pred_x":output_x,
                 "pred_y":output_y,
             }
-            loss = criterion(output_x, output_y, target_x, target_y, target_weight)
+            loss = criterion(outputs, target_x, target_y, target_weight)
 
             num_images = input.size(0)
             # measure accuracy and record loss
