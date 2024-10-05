@@ -171,6 +171,10 @@ def validate_sa_simdr(config, val_loader, val_dataset, model, criterion, output_
             target_y = target_y.cuda(non_blocking=True)
             target_weight = target_weight.cuda(non_blocking=True).float()
 
+            outputs={
+                "pred_x":output_x,
+                "pred_y":output_y,
+            }
             loss = criterion(output_x, output_y, target_x, target_y, target_weight)
 
             num_images = input.size(0)
